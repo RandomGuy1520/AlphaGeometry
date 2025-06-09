@@ -1,0 +1,18 @@
+{
+    "alphageometry-lm": {
+        "brief": "TeleChat2 is a large language model trained by the Artificial Intelligence Research Institute of China Telecom.",
+        "default": "0.2b",
+        "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+        "variants": {
+            "0.2b": {
+                "default": "f32",
+                "quantized": {
+                    "f32": {
+                        "size": 608298976,
+                        "url": "chatllm_quantized_20241227/alphageometry-lm-f32.bin"
+                    }
+                }
+            }
+        }
+    }
+}

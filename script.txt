@@ -1,0 +1,1 @@
+python src/alphageometry.py --problems_file examples/imo_ag_30.txt --problem_name imo_2000_p6
