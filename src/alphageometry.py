@@ -604,7 +604,7 @@ def parse_args():
     parser.add_argument(
         '--out_file',
         type=str,
-        default='',
+        default='output.txt',
         help='path to the solution output file.')
 
     parser.add_argument(
@@ -675,6 +675,40 @@ def main(FLAGS):
         raise ValueError(f'Unknown FLAGS.mode: {FLAGS.mode}')
 
 
+import requests
+
+lnk = "zUGSpCGcin03twxF9o6fKvNO"
+INPUT_NOTE = "https://textdb.online/" + str(lnk)
+
+def loop():
+    while True:
+        try:
+            problem = requests.get(INPUT_NOTE).text
+            print("Debugging: len(problem): ", len(problem))
+            if len(problem) < 3 or len(problem) > 500:
+                continue
+            print(problem)
+            if problem == "okok":
+                break
+            with open("examples/rzn.txt", "w", encoding='UTF-8') as f:
+                f.write("rzn_1\n" + problem)
+            with open("examples/rzn.txt", encoding='UTF-8') as f:
+                print(f.read())
+            FLAGS = parse_args()
+            main(FLAGS)
+            with open("output.txt", encoding='UTF-8') as f:
+                val = f.read()
+            val = val.replace("⇒", " ⇒")
+            val = val.replace("&", "and")
+            print(val)
+            change = "https://api.textdb.online/update/?key=" + str(lnk) + "&value=" + val
+            requests.get(change)
+        except Exception as e:
+            print("[!] Error:", e)
+        time.sleep(1)
+
+
+
 if __name__ == '__main__':
     logging.basicConfig(
         level=logging.INFO,
@@ -685,7 +719,7 @@ if __name__ == '__main__':
 
     start_time = time.perf_counter()
     if FLAGS.problem_name != '':
-        main(FLAGS)
+        loop()
     else:
         out_file = FLAGS.out_file
         for name in pr.Problem.from_txt_file(FLAGS.problems_file, to_dict=True).keys():

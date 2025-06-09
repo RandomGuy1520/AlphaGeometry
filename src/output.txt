@@ -1,0 +1,50 @@
+
+==========================
+ * From theorem premises:
+A B C H M D E F : Points
+BH ⟂ AC [00]
+AH ⟂ BC [01]
+M,H,A are collinear [02]
+MA = MH [03]
+D,C,A are collinear [04]
+AC ⟂ DB [05]
+BD = BE [06]
+CD = CE [07]
+E,A,F are collinear [08]
+M,C,F are collinear [09]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. BD = BE [06] & CD = CE [07] (SSS)⇒  ∠CBD = ∠EBC [10]
+002. BD = BE [06] & CD = CE [07] ⇒  BC ⟂ DE [11]
+003. BD = BE [06] & CD = CE [07] (SSS)⇒  ∠BDC = ∠CEB [12]
+004. AC ⟂ DB [05] & BH ⟂ AC [00] & ∠CBD = ∠EBC [10] ⇒  ∠CBH = ∠EBC [13]
+005. D,C,A are collinear [04] & AC ⟂ DB [05] & BH ⟂ AC [00] ⇒  AD ⟂ DH [14]
+006. M,H,A are collinear [02] & MA = MH [03] ⇒  M is midpoint of AH [15]
+007. AD ⟂ DH [14] & M is midpoint of AH [15] ⇒  HM = DM [16]
+008. AD ⟂ DH [14] & M is midpoint of AH [15] ⇒  AM = DM [17]
+009. HM = DM [16] ⇒  ∠MDH = ∠DHM [18]
+010. H,A,M are collinear [02] & AH ⟂ BC [01] ⇒  MH ⟂ BC [19]
+011. D,A,C are collinear [04] & AC ⟂ DB [05] & BH ⟂ AC [00] ⇒  DC ⟂ BH [20]
+012. MH ⟂ BC [19] & DC ⟂ BH [20] ⇒  ∠MHB = ∠BCD [21]
+013. D,A,C are collinear [04] & AC ⟂ DB [05] & BH ⟂ AC [00] & ∠MDH = ∠DHM [18] & M,H,A are collinear [02] & ∠MHB = ∠BCD [21] ⇒  ∠BCD = ∠(BH-DM) [22]
+014. ∠CBH = ∠EBC [13] & ∠BCD = ∠(BH-DM) [22] ⇒  ∠(BE-DC) = ∠(BC-DM) [23]
+015. CD = CE [07] (SSS)⇒  ∠CDE = ∠DEC [24]
+016. M,H,A are collinear [02] & D,C,A are collinear [04] & ∠CDE = ∠DEC [24] & BC ⟂ DE [11] & AH ⟂ BC [01] ⇒  ∠MAD = ∠CED [25]
+017. AM = DM [17] ⇒  ∠MDA = ∠DAM [26]
+018. D,C,A are collinear [04] & ∠MDA = ∠DAM [26] & M,H,A are collinear [02] & BC ⟂ DE [11] & AH ⟂ BC [01] ⇒  ∠MDA = ∠CDE [27]
+019. D,C,A are collinear [04] & ∠MDA = ∠DAM [26] & M,H,A are collinear [02] & BC ⟂ DE [11] & AH ⟂ BC [01] ⇒  ∠ADE = ∠MDC [28]
+020. ∠MAD = ∠CED [25] & ∠MDA = ∠CDE [27] (Similar Triangles)⇒  AM:EC = AD:ED [29]
+021. AM:EC = AD:ED [29] & AM = DM [17] & DC = EC [07] ⇒  DA:DE = DM:DC [30]
+022. DA:DE = DM:DC [30] & ∠ADE = ∠MDC [28] (Similar Triangles)⇒  ∠DAE = ∠DMC [31]
+023. E,A,F are collinear [08] & ∠(BE-DC) = ∠(BC-DM) [23] & D,C,A are collinear [04] & ∠DAE = ∠DMC [31] & M,C,F are collinear [09] ⇒  ∠EFC = ∠EBC [32]
+024. ∠EFC = ∠EBC [32] ⇒  B,E,C,F are concyclic [33]
+025. D,A,C are collinear [04] & ∠BDC = ∠CEB [12] & AC ⟂ DB [05] & BH ⟂ AC [00] ⇒  ∠BDC = ∠BEC [34]
+026. ∠BDC = ∠BEC [34] ⇒  B,C,D,E are concyclic [35]
+027. B,E,C,F are concyclic [33] & B,C,D,E are concyclic [35] ⇒  B,C,D,F are concyclic [36]
+028. B,C,D,F are concyclic [36] ⇒  ∠DBF = ∠DCF [37]
+029. D,A,C are collinear [04] & ∠DBF = ∠DCF [37] ⇒  ∠BFC = ∠BDC
+==========================

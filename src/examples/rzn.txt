@@ -1,0 +1,2 @@
+rzn_1
+a b c = triangle a b c; h = orthocenter h a b c; m = midpoint m a h; d = foot d b a c; e = reflect e d b c; f = on_line f a e, on_line f m c ? eqangle b f f c b d d c
