@@ -1,2 +1,0 @@
-t3p7
-a b d = triangle a b d; c = on_circle c a b; m = midpoint m b c; e = on_line a d, eqangle3 b a b a d; o = circle o b d c; u = midpoint u a d; k = on_circle k o b, on_circle k u d; r = circle r a m k ? cyclic a k m e
